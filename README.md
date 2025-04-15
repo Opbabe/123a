@@ -1,7 +1,7 @@
 
 # ML Alzheimer's Project
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-SJSU-blue.svg)](LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/yourusername/ML-Alzheimers-Project.svg)](https://github.com/yourusername/ML-Alzheimers-Project/issues)
 [![GitHub stars](https://img.shields.io/github/stars/yourusername/ML-Alzheimers-Project.svg)](https://github.com/yourusername/ML-Alzheimers-Project/stargazers)
 
