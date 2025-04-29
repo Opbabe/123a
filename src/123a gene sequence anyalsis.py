@@ -9,13 +9,7 @@ from sklearn.metrics import accuracy_score, classification_report
 from sklearn.svm import SVC
 
 #Fix file path if needed
-df = pd.read_csv(
-    'GDS4758.soft.gz',
-    skiprows=141,
-    sep='\t',
-    skipfooter=1,
-    engine='python'         # ← enable skipfooter
-)
+df = pd.read_csv('GDS4758.soft.gz',skiprows=141,sep='\t',skipfooter=1,engine='python')
 
 
 # Manually enetered where and status of the sample from the .soft file
@@ -39,7 +33,7 @@ new_row += [None] * (len(df.columns) - len(new_row))
 df.loc[len(df)] = new_row
 
 # Clean the data for this df
-ad_status = df.iloc[-1]          # <--- keep this as strings for later
+ad_status = df.iloc[-1]         
 df = df.drop(df.index[-1])
 
 df.set_index("ID_REF", inplace=True)
@@ -57,7 +51,7 @@ top_800_genes = gene_variance.nlargest(800).index
 df_top800_genes = df.loc[top_800_genes]
 
 # Visualizations
-# Heatmap
+
 plt.figure(figsize=(12, 8))
 sns.heatmap(df_top_genes, cmap="viridis", xticklabels=10, yticklabels=10)
 plt.title('Top Genes with Highest Variance Heatmap')
@@ -67,7 +61,7 @@ plt.ylabel('Gene Identifier')
 plt.show()
 
 # Extract AD status
-ad_strings = ad_status                                 # <--- preserve originals
+ad_strings = ad_status                             
 ad = ad_strings.str.split("_").str[0]
 ad_status = ad.map(lambda x: 1 if x == "AD" else 0)
 ad_status = ad_status.drop(columns=['IDENTIFIER'])
@@ -107,7 +101,6 @@ svm_classifier.fit(X_train, y_train)
 # Predict
 y_pred = svm_classifier.predict(X_test)
 
-# Evaluate
 accuracy = accuracy_score(y_test, y_pred)
 print(f"SVM Accuracy: {accuracy:.3f}")
 print("Classification Report:\n", classification_report(y_test, y_pred))
