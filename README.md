@@ -12,7 +12,7 @@
 - [Project Motivation](#project-motivation)
 - [Project Structure](#project-structure)
 - [Contact](#contact)
-
+- [How to Run](#how-to-run)
 ---
 
 ## Overview
@@ -39,8 +39,11 @@ This work bridges cutting-edge machine learning methods with practical software 
 123a/
 ├── data/
 │   ├── GDS4758.soft
-│   ├── GDS4758 (1).soft
+│   ├── oasis_cross-sectional.csv 
 │   └── .DS_Store
+├── docs/
+│   ├── Propsoal
+│   ├── Presnetation
 ├── src/
 │   ├── phenotype/
 │   │   └── phenotype_pipeline.py
@@ -48,6 +51,8 @@ This work bridges cutting-edge machine learning methods with practical software 
 ├── README.md
 ├── requirements.txt
 └── .gitignore
+
+
 ```
 
 ## How to Run
@@ -67,8 +72,6 @@ This work bridges cutting-edge machine learning methods with practical software 
      - `age_vs_mmse.png`  
      - `decision_tree.png`  
 
-- **Gene Sequencing:**  
-  There is two important files to run one is the data file GDS4758.soft which stores all the data for gene sequencing. By saving this file in the same folder as the 123a gene sequence anyalsis.py and running the application should work and give you all the anyalsis done for the gene sequencing.  
 - **Gene Sequencing:**
   	There is two important files to run one is the data file GDS4758.soft which stores all the data for gene sequencing. By saving this file 	in the same folder as the 123a gene sequence anyalsis.py and running the application should work and give you all the anyalsis done for 	the gene sequencing.
 
