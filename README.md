@@ -2,8 +2,6 @@
 # ML Alzheimer's Project
 
 [![GitHub license](https://img.shields.io/badge/license-SJSU-blue.svg)](LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/yourusername/ML-Alzheimers-Project.svg)](https://github.com/yourusername/ML-Alzheimers-Project/issues)
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/ML-Alzheimers-Project.svg)](https://github.com/yourusername/ML-Alzheimers-Project/stargazers)
 
 > **Machine Learning for Alzheimer's Disease Analysis**
 
@@ -37,18 +35,40 @@ This work bridges cutting-edge machine learning methods with practical software 
 
 ## Project Structure
 
-ML-Alzheimers-Project/
-├── data/                   # Raw and processed datasets
-├── docs/                   # Project documentation & proposals
-├── src/                    # Code for Anyalsis
-├── README.md               # Project overview (this file)
-
----
-
+```plaintext
+123a/
+├── data/
+│   ├── GDS4758.soft
+│   ├── GDS4758 (1).soft
+│   └── .DS_Store
+├── src/
+│   ├── phenotype/
+│   │   └── phenotype_pipeline.py
+│   └── 123a gene sequence anyalsis.py
+├── README.md
+├── requirements.txt
+└── .gitignore
+```
 
 ## How to Run
-- **Phenotype:**
-  	dfdsf
+
+- **Phenotype:**  
+  1. Download (or move) `oasis_cross-sectional.csv` into the project root.  
+  2. Install the Python requirements:  
+     ```bash
+     pip install -r requirements.txt
+     ```  
+  3. Execute the pipeline:  
+     ```bash
+     python src/phenotype/phenotype_pipeline.py
+     ```  
+  4. After it finishes you’ll find three output plots in the root folder:  
+     - `oasis_dementia_donut.png`  
+     - `age_vs_mmse.png`  
+     - `decision_tree.png`  
+
+- **Gene Sequencing:**  
+  There is two important files to run one is the data file GDS4758.soft which stores all the data for gene sequencing. By saving this file in the same folder as the 123a gene sequence anyalsis.py and running the application should work and give you all the anyalsis done for the gene sequencing.  
 - **Gene Sequencing:**
   	There is two important files to run one is the data file GDS4758.soft which stores all the data for gene sequencing. By saving this file 	in the same folder as the 123a gene sequence anyalsis.py and running the application should work and give you all the anyalsis done for 	the gene sequencing.
 
